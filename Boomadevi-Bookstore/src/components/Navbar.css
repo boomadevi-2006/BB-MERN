@@ -1,0 +1,85 @@
+/* Default navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: brown;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  flex-wrap: wrap; /* helps on smaller screens */
+}
+
+/* Brand styling */
+.brand {
+  background-color: bisque;
+  color: green;
+  border: 2px solid black;
+  border-radius: 50px;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: bisque;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.link {
+  background-color: bisque;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: brown;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    display: none;
+    width: 180px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .link {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+}

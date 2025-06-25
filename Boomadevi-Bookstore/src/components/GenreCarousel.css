@@ -1,0 +1,64 @@
+.genre-carousel-container {
+  overflow: hidden;
+  padding: 20px;
+  background-color: #f8fff4;
+}
+
+.genre-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+.genre-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.genre-card {
+  scroll-snap-align: start;
+  background-color: bisque;
+  border: 2px solid darkgreen;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: darkgreen;
+  font-weight: bold;
+  transition: transform 0.3s;
+  flex: 0 0 auto;
+  width: 25%; /* Default: 4 per row */
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.genre-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.genre-card p {
+  margin: 10px 0;
+}
+
+/* ✅ Tablet: 2 cards */
+@media (max-width: 992px) {
+  .genre-card {
+    width: 50%;
+    margin-right: 10px;
+  }
+}
+
+/* ✅ Mobile: show 1 card only, full width, no margin */
+@media (max-width: 600px) {
+  .genre-carousel {
+    gap: 0;
+  }
+
+  .genre-card {
+    width: 100%;
+    margin-right: 0;
+  }
+}

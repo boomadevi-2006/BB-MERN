@@ -1,0 +1,46 @@
+/* src/components/HeaderWithVideo.css */
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.heading {
+  font-size: 3rem;
+  color: white;
+  z-index: 1;
+  text-shadow: 2px 2px 4px red;
+  position: relative;
+}
+
+.glow-text {
+  font-size: 3rem; /* Ensure 3rem is applied if glow-text is used independently */
+  color: white;
+  text-shadow: 0 0 5px #ec0909, 0 0 15px red;
+  animation: glitter 1.5s infinite alternate;
+}
+
+@keyframes glitter {
+  50% {
+    text-shadow: 0 0 15px sandybrown, 0 0 25px sandybrown;
+  }
+}
+
+body.dark .glow-text {
+  text-shadow: 0 0 10px #0df553;
+}

@@ -1,0 +1,41 @@
+.shop-navbar {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+  background-color: #004225;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  scrollbar-width: none; /* Firefox */
+}
+
+.shop-navbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.shop-link {
+  flex-shrink: 0;
+  color: white;
+  background: darkolivegreen;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.shop-link.active,
+.shop-link:hover {
+  background-color: #88cc88;
+  color: black;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .shop-link {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
